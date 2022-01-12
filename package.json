@@ -1,0 +1,16 @@
+{
+  "name": "002-node",
+  "version": "1.0.0",
+  "description": "First Node.JS project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mantas <mantasluk7@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
