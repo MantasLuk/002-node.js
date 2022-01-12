@@ -1,7 +1,7 @@
-Arbata
-Kava
-Kakava
-Sula
-Gira
-Limonadas
-Sultys
+Arbata 0.15 10
+Kava 1.50 21
+Kakava 2.00 3
+Sula 7.00 2
+Gira 0.99 34
+Limonadas 1.25 25
+Sultys 2.50 33
