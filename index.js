@@ -48,12 +48,12 @@ const s2 = 'Chuck Norris';
 const s3 = 'Wonder WomaN';
 const s4 = 'Algimantas cekuolis';
 
-function inicialai (pavadinimas){
-    const word = pavadinimas.split(' ');
-    const vardas = word[0][0].toUpperCase();
-    const pavarde = word[1][0].toUpperCase();
+function inicialai (text){
+    const name = text.split(' ');
+    const nameFirstLetter = name[0][0].toUpperCase();
+    const surnameFirstLettere = name[1][0].toUpperCase();
 
-console.log(`Legendines asmenybes ${word[0]} ${word[1]} trumpinys yra ${vardas}.${pavarde}.`);
+console.log(`Legendines asmenybes ${name[0]} ${name[1]} trumpinys yra ${nameFirstLetter}.${surnameFirstLettere }.`);
 }
 
 inicialai(s1);
@@ -63,22 +63,76 @@ inicialai(s4);
 
 // rezultata pateikti tokiu sablonu:
 // [Vardas] [Pavarde] yra [amzius] metu amziaus.
-const jonas = {
-    name: 'Jonas',
-    surname: 'Jonaitis',
-    age: 99,
-}
-const maryte = {
-    name: 'Maryte',
-    surname: 'Marytaite',
-    age: 87,
-}
+const people = [
+    {name: 'Jonas',surname: 'Jonaitis', age: 99},
+    {name: 'Maryte', surname: 'Marytaite', age: 87,}
+];
+
 
 function personAge (person) {
     console.log(`${person.name} ${person.surname} yra ${person.age} metu amziaus`);
+};
+
+
+//ciklai pagal efektyvuma:
+
+//for
+//while
+//do-while
+//for-of
+//for-in
+//map
+//foreach
+
+console.log('-----for-of');
+
+for (const person of people) {
+    personAge(person)
+};
+
+
+console.log('-----for');
+
+for (let i = 0; i < people.length; i++){
+    const person = people[i];
+    personAge(person);
 }
-personAge(jonas);
-personAge(maryte);
+
+
+console.log('-----while');
+
+let iw = 0;
+while (iw < people.length){
+    const person = people[iw];
+    personAge(person);
+    iw++;
+}
+
+
+console.log('-----do-while');
+
+let idw = 0;
+do {
+    const person = people[idw];
+    personAge(person);
+    idw++;  
+} while (idw < people.length);
+
+
+console.log('-----for-in');
+
+for (const i in people) {
+    const person = people[i];
+    personAge(person)
+};
+
+
+console.log('-----foreach');
+
+people.forEach ((person) => {
+    personAge(person)
+});
+
 
 
 
